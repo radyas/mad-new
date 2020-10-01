@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "477034289279",
+    "firebase_url": "https://mad-mini-8dd2e.firebaseio.com",
+    "project_id": "mad-mini-8dd2e",
+    "storage_bucket": "mad-mini-8dd2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477034289279:android:e435aa618844b9db29474a",
+        "android_client_info": {
+          "package_name": "com.example.foodie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477034289279-e3jeotgvedfrc7fpiigm1fgvdtirsqn0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSwQh_VdT1pD0EDYd4UaPCuRKZuqbQ9-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477034289279-e3jeotgvedfrc7fpiigm1fgvdtirsqn0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
