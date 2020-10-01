@@ -2,6 +2,7 @@ package com.example.foodie;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -33,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
     public void  updateUI(FirebaseUser account){
         if(account != null){
             Toast.makeText(this,"Signed In",Toast.LENGTH_LONG).show();
-//            startActivity(new Intent(this,AnotherActivity.class));
         }else {
             Toast.makeText(this,"Sign in Failed",Toast.LENGTH_LONG).show();
+            startActivity(new Intent(this,sign_up.class));
         }
     }
 }
