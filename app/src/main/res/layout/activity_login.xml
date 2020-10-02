@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".LoginActivity">
 
     <TextView
         android:id="@+id/sign_in_header"
@@ -33,6 +33,7 @@
         android:id="@+id/sign_in_button2"
         android:layout_width="221sp"
         android:layout_height="56sp"
+        android:onClick="register"
         android:text="@string/sign_up_header"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

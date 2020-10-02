@@ -84,6 +84,7 @@
         android:id="@+id/sign_up_button2"
         android:layout_width="221sp"
         android:layout_height="56sp"
+        android:onClick="login"
         android:text="@string/sign_in_header"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
