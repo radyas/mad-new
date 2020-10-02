@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void  updateUI(FirebaseUser account){
         if(account != null){
-            Toast.makeText(this,"Signed In",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Signed In",Toast.LENGTH_SHORT).show();
         }else {
-            Toast.makeText(this,"Sign in Failed",Toast.LENGTH_LONG).show();
-            startActivity(new Intent(this,LoginActivity.class));
+            Toast.makeText(this,"Sign in Failed",Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this,sign_up.class));
         }
     }
 }

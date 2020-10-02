@@ -33,7 +33,6 @@
         android:id="@+id/sign_in_button2"
         android:layout_width="221sp"
         android:layout_height="56sp"
-        android:onClick="register"
         android:text="@string/sign_up_header"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
