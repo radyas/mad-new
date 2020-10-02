@@ -8,5 +8,9 @@
     <string name="sign_up_header">Sign Up</string>
     <string name="sign_up_help">Have an Account? Sign in</string>
 
+    <!-- Sign Up -->
     <string name="sign_in_header">Sign in</string>
+    <string name="sign_in_email_hint">Email</string>
+    <string name="sign_in_password_hint">Password</string>
+    <string name="sign_in_help">Don\'t have an Account? Sign Up</string>
 </resources>

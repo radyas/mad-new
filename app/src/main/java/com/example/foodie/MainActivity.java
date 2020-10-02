@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"Signed In",Toast.LENGTH_LONG).show();
         }else {
             Toast.makeText(this,"Sign in Failed",Toast.LENGTH_LONG).show();
-            startActivity(new Intent(this,sign_up.class));
+            startActivity(new Intent(this,LoginActivity.class));
         }
     }
 }
