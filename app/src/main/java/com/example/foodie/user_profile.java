@@ -6,43 +6,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
-
-    private FirebaseAuth mAuth;
+public class user_profile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mAuth = FirebaseAuth.getInstance();
+        setContentView(R.layout.activity_user_profile);
+
     }
-
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-
-        updateUI(currentUser);
-    }
-
-
-    public void  updateUI(FirebaseUser account){
-        if(account != null){
-            Toast.makeText(this,"Signed In",Toast.LENGTH_LONG).show();
-        }else {
-            Toast.makeText(this,"Sign in Failed",Toast.LENGTH_LONG).show();
-            startActivity(new Intent(this,LoginActivity.class));
-        }
-    }
-
 
     @Override
     protected void onResume() {
@@ -52,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.appBottomNavigationBar);
 
         //set selected icon
-        bottomNavigationView.setSelectedItemId(R.id.navbar_main_menu_icon);
+        bottomNavigationView.setSelectedItemId(R.id.navbar_user_profile_icon);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -94,4 +68,5 @@ public class MainActivity extends AppCompatActivity {
         //navigation bar ends
 
     }
+
 }
