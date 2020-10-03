@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -25,6 +27,7 @@ public class sign_up extends AppCompatActivity {
 
     Button mRegister, mLogin;
     EditText mEmail, mPassword, mName;
+    String userID;
 
 
     @Override
@@ -65,6 +68,33 @@ public class sign_up extends AppCompatActivity {
                 if (TextUtils.isEmpty(password)){
                     mPassword.setError("Password is empty.");
                 }
+
+                auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            FirebaseUser user = auth.getCurrentUser();
+                            user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Toast.makeText(sign_up.this, "Verification mail sent.", Toast.LENGTH_SHORT).show();
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Log.d(TAG, "Email not sent. " + e.getMessage());
+                                }
+                            });
+                        }
+                        else{
+                            Toast.makeText(sign_up.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                Toast.makeText(sign_up.this, "User Created", Toast.LENGTH_SHORT).show();
+                userID = auth.getCurrentUser().getUid();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
 
             }
