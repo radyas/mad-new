@@ -25,7 +25,7 @@ public class user_profile extends AppCompatActivity {
         //navigation bar begins
         BottomNavigationView bottomNavigationView = findViewById(R.id.appBottomNavigationBar);
 
-        //set selected icon
+        //set selected icons
         bottomNavigationView.setSelectedItemId(R.id.navbar_user_profile_icon);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
