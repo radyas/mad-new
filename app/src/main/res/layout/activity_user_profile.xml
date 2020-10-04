@@ -13,18 +13,18 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="4dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginLeft="-2dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="-3dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:gravity="center_horizontal"
         android:text="User Profile"
         android:textAlignment="center"
-        android:textSize="36sp"
-        android:layout_marginLeft="4dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:gravity="center_horizontal" />
+        android:textSize="36sp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/appBottomNavigationBar"
@@ -83,9 +83,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="58dp"
-        android:layout_marginLeft="58dp"
-        android:layout_marginBottom="194dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginLeft="54dp"
+        android:layout_marginBottom="193dp"
         android:text="@string/userprofile_email"
         android:textSize="18sp" />
 
@@ -117,12 +117,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="183dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="182dp"
         android:ems="10"
         android:hint="email"
-        android:inputType="textPersonName"
-        android:layout_alignParentRight="true" />
+        android:inputType="textPersonName" />
 
 
 </RelativeLayout>
