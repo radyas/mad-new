@@ -19,6 +19,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class sign_up extends AppCompatActivity {
 
@@ -94,6 +96,8 @@ public class sign_up extends AppCompatActivity {
 
                 Toast.makeText(sign_up.this, "User Created", Toast.LENGTH_SHORT).show();
                 userID = auth.getCurrentUser().getUid();
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("User");
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
 
