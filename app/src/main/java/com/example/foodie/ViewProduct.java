@@ -33,7 +33,7 @@ public class ViewProduct extends AppCompatActivity {
 
     //view objects
     EditText editID,editName,editPrice;
-    Button btnAdd;
+    Button btnAdd,btnDelete;
     private DatabaseReference databaseProduct;
 //a list to store all the data
     List<ProductData> productData;
@@ -53,6 +53,7 @@ public class ViewProduct extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
         btnAdd = (Button)findViewById(R.id.btnAdd);
+        btnDelete = (Button) findViewById(R.id.btnDelete);
 
         btnAdd.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
@@ -61,6 +62,15 @@ public class ViewProduct extends AppCompatActivity {
                 //addProduct();
             }
         });
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View view) {
+                        //Intent intent = new Intent(ViewProduct.this, DeleteProduct.class);
+                        //startActivity(intent);
+//                        deleteProduct(productID);
+                    }
+                });
+
+
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

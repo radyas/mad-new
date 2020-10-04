@@ -93,7 +93,7 @@ public class sign_up extends AppCompatActivity {
                 });
 
                 Toast.makeText(sign_up.this, "User Created", Toast.LENGTH_SHORT).show();
-                userID = auth.getCurrentUser().getUid();
+//                userID = auth.getCurrentUser().getUid();
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
 

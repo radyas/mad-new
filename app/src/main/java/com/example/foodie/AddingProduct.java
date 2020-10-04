@@ -44,7 +44,7 @@ public class AddingProduct extends AppCompatActivity {
         btnAdd = (Button) findViewById(R.id.adddata);
 
         //getting reference
-        databaseProduct = FirebaseDatabase.getInstance().getReference("ProductData");
+        databaseProduct = FirebaseDatabase.getInstance().getReference("foodie-4b5a1");
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
