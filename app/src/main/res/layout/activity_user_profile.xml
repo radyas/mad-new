@@ -6,15 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".user_profile">
 
+    <!--    Bottom navigation bar  -->
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="199dp"
-        android:layout_height="85dp"
-        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="5dp"
-        android:text="UserProfile" />
+        android:layout_marginEnd="-3dp"
+        android:layout_marginRight="5dp"
+        android:text="User Profile"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:layout_marginLeft="4dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center_horizontal" />
 
-    <!--    Bottom navigation bar  -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/appBottomNavigationBar"
         android:layout_width="match_parent"
@@ -25,6 +36,93 @@
         android:layout_alignParentBottom="true"
         >
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="207dp"
+        android:layout_height="190dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="94dp"
+        app:srcCompat="@drawable/ic_baseline_account_icon_navbar"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="236dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginLeft="86dp"
+        android:layout_marginTop="299dp"
+        android:gravity="center_horizontal"
+        android:text="@string/userprofile_username"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="128dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginLeft="54dp"
+        android:layout_marginBottom="261dp"
+        android:text="@string/userprofile_phone"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="126dp"
+        android:layout_height="31dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginBottom="194dp"
+        android:text="@string/userprofile_email"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="118dp"
+        android:text="@string/userprofile_button" />
+
+    <EditText
+        android:id="@+id/userprofile_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="261dp"
+        android:ems="10"
+        android:hint="phone"
+        android:inputType="textPersonName"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="11dp" />
+
+    <EditText
+        android:id="@+id/userprofile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="183dp"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textPersonName"
+        android:layout_alignParentRight="true" />
 
 
 </RelativeLayout>
