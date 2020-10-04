@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
+//import com.bumptech.glide.Glide;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -50,7 +50,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>
         if(cartList != null && cartList.size() > position)
         {
             final Cart cart = cartList.get(position);
-            Glide.with(context).load(cart.getLink()).into(holder.image);
+//            Glide.with(context).load(cart.getLink()).into(holder.image);
 
             holder.name.setText(cart.getName());
             holder.price.setText("" + cart.getPrice() + " LKR");

@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.foodie.Models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -80,6 +81,18 @@ public class sign_up extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(Void aVoid) {
                                     Toast.makeText(sign_up.this, "Verification mail sent.", Toast.LENGTH_SHORT).show();
+                                    userID = auth.getCurrentUser().getUid();
+                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                    DatabaseReference myRef = database.getReference("User");
+
+                                    User user = new User();
+                                    user.setEmail(email);
+                                    user.setName(name);
+                                    user.setUserID("user");
+
+                                    myRef.child(userID).setValue(user);
+
+                                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
@@ -95,11 +108,8 @@ public class sign_up extends AppCompatActivity {
                 });
 
                 Toast.makeText(sign_up.this, "User Created", Toast.LENGTH_SHORT).show();
-                if(auth.getCurrentUser() != null)
-                userID = auth.getCurrentUser().getUid();
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("User");
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+
 
 
             }

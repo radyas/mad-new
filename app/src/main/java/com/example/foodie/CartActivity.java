@@ -9,11 +9,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -39,6 +41,52 @@ public class CartActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
+
+
+        //navigation bar begins
+        BottomNavigationView bottomNavigationView = findViewById(R.id.appBottomNavigationBar);
+
+        //set selected icon
+        bottomNavigationView.setSelectedItemId(R.id.navbar_cart_icon);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch ((item.getItemId()))
+                {
+                    case R.id.navbar_main_menu_icon:
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.navbar_fooditems_icon:
+//                        Intent intent1 = new Intent(getApplicationContext(), .class);
+//                        startActivity(intent1);
+//                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.navbar_cart_icon:
+                        Intent intent2 = new Intent(getApplicationContext(), CartActivity.class);
+                        startActivity(intent2);
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.navbar_user_profile_icon:
+                        Intent intent3 = new Intent(getApplicationContext(), user_profile.class);
+                        startActivity(intent3);
+                        overridePendingTransition(0,0);
+                        return true;
+
+                }
+
+
+                return false;
+            }
+        });
+
+        //navigation bar ends
 
 
         dialog = new ProgressDialog(CartActivity.this);

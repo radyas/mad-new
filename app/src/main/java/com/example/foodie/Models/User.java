@@ -4,6 +4,11 @@ public class User {
     private String userID, name, phone, email, userType;
 
     public User() {
+        this.userID = "null";
+        this.name = "null";
+        this.phone = "null";
+        this.email = "null";
+        this.userType = "null";
     }
 
     public User(String userID, String name, String phone, String email, String userType) {

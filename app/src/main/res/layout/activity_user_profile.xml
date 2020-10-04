@@ -93,9 +93,12 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="118dp"
+        android:layout_marginEnd="269dp"
+        android:layout_marginRight="269dp"
+        android:layout_marginBottom="113dp"
         android:text="@string/userprofile_button" />
 
     <EditText
@@ -125,6 +128,22 @@
         android:ems="10"
         android:hint="email"
         android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="253dp"
+        android:layout_marginLeft="253dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="114dp"
+        android:text="Logout" />
 
 
 </RelativeLayout>
