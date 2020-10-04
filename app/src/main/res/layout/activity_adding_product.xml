@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <!--    Bottom navigation bar  -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/appBottomNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        app:itemIconSize="40dp"
+        app:itemIconTint="@drawable/bottom_navigationbar_colorselector"
+        app:menu="@menu/bottomnavigation_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <TextView
+        android:id="@+id/product"
+        android:layout_width="106dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="121dp"
+        android:layout_marginLeft="121dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="183dp"
+        android:layout_marginRight="183dp"
+        android:text="Product"/>
+<EditText
+    android:id="@+id/editID"
+    android:layout_marginVertical="440dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter ProductID"/>
+    <EditText
+        android:id="@+id/editName"
+        android:layout_marginVertical="480dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Product Name"/>
+    <EditText
+        android:id="@+id/editPrice"
+        android:layout_marginVertical="530dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter price"/>
+
+    <LinearLayout
+        android:layout_marginVertical="570dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Add Product"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
