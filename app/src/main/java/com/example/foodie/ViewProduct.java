@@ -34,7 +34,7 @@ public class ViewProduct extends AppCompatActivity {
     //view objects
     EditText editID,editName,editPrice;
     Button btnAdd;
-
+    private DatabaseReference databaseProduct;
 //a list to store all the data
     List<ProductData> productData;
 
@@ -44,7 +44,7 @@ public class ViewProduct extends AppCompatActivity {
         setContentView(R.layout.activity_view_product);
 
         //getting reference
-        //databaseProduct = FirebaseDatabase.getInstance().getReference("ProductData");
+        databaseProduct = FirebaseDatabase.getInstance().getReference("ProductData");
 
         //getting views
         editID = (EditText)findViewById(R.id.editID);
@@ -56,7 +56,9 @@ public class ViewProduct extends AppCompatActivity {
 
         btnAdd.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                addProduct();
+                Intent intent = new Intent(ViewProduct.this,AddingProduct.class);
+                startActivity(intent);
+                //addProduct();
             }
         });
         recyclerView.setHasFixedSize(true);
@@ -74,14 +76,18 @@ public class ViewProduct extends AppCompatActivity {
         recyclerView.setAdapter(productAdapter);
 
     }
+    public void deleteProduct(ProductData productData){
 
-    private void addProduct(){
+
+    }
+
+    public void addProduct(){
         String productID = editID.getText().toString().trim();
         String productName = editName.getText().toString().trim();
         String price = editPrice.getText().toString().trim();
 
-        /*if(!TextUtils.isEmpty(productID)){
-            String id = databaseProduct.push.getKey();
+        if(!TextUtils.isEmpty(productID)){
+            String id = databaseProduct.push().getKey();
 
             //creating a new product
             ProductData product = new ProductData(productID,productName,price);
@@ -94,7 +100,7 @@ public class ViewProduct extends AppCompatActivity {
             Toast.makeText(this, "Product added", Toast.LENGTH_LONG).show();
         }else{
             Toast.makeText(this, "Please enter an ID", Toast.LENGTH_LONG).show();
-        }*/
+        }
     }
     @Override
     protected void onResume() {
