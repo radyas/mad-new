@@ -74,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.navbar_cart_icon:
-//                        Intent intent2 = new Intent(getApplicationContext(), .class);
-//                        startActivity(intent2);
-//                        overridePendingTransition(0,0);
+                        Intent intent2 = new Intent(getApplicationContext(), CartActivity.class);
+                        startActivity(intent2);
+                        overridePendingTransition(0,0);
                         return true;
 
                     case R.id.navbar_user_profile_icon:

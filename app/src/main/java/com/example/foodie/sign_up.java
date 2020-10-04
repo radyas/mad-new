@@ -95,6 +95,7 @@ public class sign_up extends AppCompatActivity {
                 });
 
                 Toast.makeText(sign_up.this, "User Created", Toast.LENGTH_SHORT).show();
+                if(auth.getCurrentUser() != null)
                 userID = auth.getCurrentUser().getUid();
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference("User");
