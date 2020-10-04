@@ -7,15 +7,6 @@
     tools:context=".CartActivity">
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/appBottomNavigationBar"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        app:itemIconSize="40dp"
-        app:itemIconTint="@drawable/bottom_navigationbar_colorselector"
-        app:menu="@menu/bottomnavigation_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="632dp">
@@ -69,5 +60,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rv_cartList" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/appBottomNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        app:itemIconSize="40dp"
+        app:itemIconTint="@drawable/bottom_navigationbar_colorselector"
+        app:menu="@menu/bottomnavigation_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
+
 
 </RelativeLayout>
