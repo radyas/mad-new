@@ -60,9 +60,9 @@ public class user_profile extends AppCompatActivity {
                         return true;
 
                     case R.id.navbar_fooditems_icon:
-//                        Intent intent1 = new Intent(getApplicationContext(), .class);
-//                        startActivity(intent1);
-//                        overridePendingTransition(0,0);
+                        Intent intent1 = new Intent(getApplicationContext(), Products.class);
+                        startActivity(intent1);
+                        overridePendingTransition(0,0);
                         return true;
 
                     case R.id.navbar_cart_icon:
