@@ -13,4 +13,8 @@
     <string name="sign_in_email_hint">Email</string>
     <string name="sign_in_password_hint">Password</string>
     <string name="sign_in_help">Don\'t have an Account? Sign Up</string>
+    <string name="userprofile_username">Name</string>
+    <string name="userprofile_phone">Contact No :</string>
+    <string name="userprofile_email">email :</string>
+    <string name="userprofile_button">Update</string>
 </resources>
